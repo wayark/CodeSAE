@@ -68,6 +68,7 @@ int main(){
 
         printf("%s  %s  %s %s %s %s %s \n", client.prenom, client.nom, client.ville, client.codePostal, client.telephone,
                client.email, client.metier);
+
     }
     fclose(fp);
     return(EXIT_SUCCESS);
