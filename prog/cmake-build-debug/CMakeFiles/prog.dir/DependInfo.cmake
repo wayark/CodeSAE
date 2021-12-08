@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/client.c" "C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/cmake-build-debug/CMakeFiles/prog.dir/client.c.obj"
   "C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/main.c" "C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/cmake-build-debug/CMakeFiles/prog.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

@@ -6,9 +6,21 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/client.c
+stdio.h
+-
+stdlib.h
+-
+client.h
+C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/client.h
+
+C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/client.h
+
 C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/main.c
 stdio.h
 -
 stdlib.h
 -
+client.h
+C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/client.h
 
