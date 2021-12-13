@@ -5,7 +5,7 @@
 
 typedef struct Client{
     char prenom[20] ;
-    char nom[20];
+    char nom[30];
     char ville[20];
     char telephone[15];
     char email[50];
@@ -14,7 +14,7 @@ typedef struct Client{
     struct Client *suivant;
 }CLIENT;
 
-void showClient(CLIENT *Client);
+void loadClient(CLIENT *Client);
 
 
 #endif //PROG_CLIENT_H

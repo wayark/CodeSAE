@@ -2,16 +2,16 @@
 #include <stdlib.h>
 #include "client.h"
 
-void showClient(CLIENT *client ){
+void loadClient(CLIENT *client){
 
-    FILE *fp = fopen("\\Users\\liaml\\Desktop\\cours\\sae\\1-2 algo et c\\annuaire5000.csv","r");
+    FILE *fp = fopen("C:\\Users\\liaml\\Desktop\\cours\\sae\\1-2 algo et c\\AnnuaireSae\\CodeSAE\\annuaire5000.csv","r");
 
     if (!fp) {
         printf("le fchier est invalide");
         exit(EXIT_FAILURE);
     }
 
-    char sortie[100];
+    char sortie[250];
     int i;
     int compt;
     int mot;
@@ -68,8 +68,8 @@ void showClient(CLIENT *client ){
 
             mot++;
         }
-        client->metier[mot] = '\0';
-        printf(" %s | %s | %s | %s | %s | %s | %s  \n", client->prenom, client->nom, client->ville, client->codePostal, client->telephone,
+        client->metier[mot-1] = '\0';
+        printf(" %s | %s | %s | %s | %s | %s | %s |  \n", client->prenom, client->nom, client->ville, client->codePostal, client->telephone,
                client->email, client->metier);
         client = client->suivant;
 
