@@ -6,7 +6,7 @@
 
 int main(){
     CLIENT *client = NULL ;
-    loadClient(client);
+    client = loadClient(client);
     int choix;
     printf("=== Menu ===\n"
            "1. Ajouter des clients\n"
@@ -29,7 +29,7 @@ int main(){
             printf("");
             break;
         case 4:
-            loadClient(client);
+            showClient(client);
             break;
         case 5:
             printf("");

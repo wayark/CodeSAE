@@ -14,7 +14,7 @@ typedef struct Client{
     struct Client *suivant;
 }CLIENT;
 
-void loadClient(CLIENT *Client);
+CLIENT *loadClient(CLIENT *Client);
 void showClient(CLIENT *Client);
 
 
