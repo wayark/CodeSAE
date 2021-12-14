@@ -4,7 +4,7 @@
 
 #define file "annuaire5000.csv"
 
-void loadClient(CLIENT *client){
+CLIENT *loadClient(CLIENT *client){
 
     FILE *fp = fopen(file,"r");
 
@@ -75,4 +75,10 @@ void loadClient(CLIENT *client){
 
     }
     fclose(fp);
+}
+
+void showClient(CLIENT *client){
+
+    printf(" %s | %s | %s | %s | %s | %s | %s |\n", client->prenom, client->nom, client->ville, client->codePostal, client->telephone,
+           client->email, client->metier);
 }
