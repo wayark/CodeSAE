@@ -29,7 +29,7 @@ int main(){
             printf("");
             break;
         case 4:
-            showClient(client);
+            loadClient(client);
             break;
         case 5:
             printf("");
