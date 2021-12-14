@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include "client.h"
 
+#define file "annuaire5000.csv"
+
 void loadClient(CLIENT *client){
 
-    FILE *fp = fopen("C:\\Users\\liaml\\Desktop\\cours\\sae\\1-2 algo et c\\AnnuaireSae\\CodeSAE\\annuaire5000.csv","r");
+    FILE *fp = fopen(file,"r");
 
     if (!fp) {
-        printf("le fchier est invalide");
+        printf("le fichier est invalide");
         exit(EXIT_FAILURE);
     }
 
@@ -69,9 +71,8 @@ void loadClient(CLIENT *client){
             mot++;
         }
         client->metier[mot-1] = '\0';
-        printf(" %s | %s | %s | %s | %s | %s | %s |  \n", client->prenom, client->nom, client->ville, client->codePostal, client->telephone,
-               client->email, client->metier);
         client = client->suivant;
 
     }
+    fclose(fp);
 }
