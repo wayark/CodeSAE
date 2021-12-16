@@ -5,14 +5,8 @@
 
 
 int main(){
-<<<<<<< Updated upstream
     CLIENT *client;
     client = loadClient(client);
-=======
-    CLIENT *client = NULL ;
-    loadClient(client);
-    printf("%s", client->email);
->>>>>>> Stashed changes
     int choix;
     printf("=== Menu ===\n"
            "1. Ajouter des clients\n"

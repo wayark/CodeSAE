@@ -14,13 +14,8 @@ typedef struct Client{
 
 }CLIENT;
 
-<<<<<<< Updated upstream
 CLIENT *loadClient(CLIENT *client);
 void showClient(CLIENT *client);
-=======
-CLIENT *loadClient(CLIENT *Client);
-void showClient(CLIENT *Client);
->>>>>>> Stashed changes
 
 
 #endif //PROG_CLIENT_H
