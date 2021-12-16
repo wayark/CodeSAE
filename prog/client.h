@@ -15,6 +15,8 @@ typedef struct Client{
 
 CLIENT *loadClient(CLIENT *client);
 void showClient(CLIENT *client);
+void showAll(CLIENT *client);
+void Filter(CLIENT *client);
 
 
 #endif //PROG_CLIENT_H

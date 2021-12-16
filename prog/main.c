@@ -2,25 +2,23 @@
 #include "client.h"
 
 
-
-
-int main(){
+int main() {
     CLIENT *client;
     client = loadClient(client);
 
     int choix;
-    printf("=== Menu ===\n"
-           "1. Affichage de la liste de tous les clients\n"
-           "2. Ajouter des clients\n"
-           "3. Supprimer des clients\n"
-           "4. Modifier les donn\202es d'un client\n"
-           "5. Filtre pour recherche\n"
-           "6. Recherche d'un client\n"
-           "7. Affichage des clients avec donn\202es manquantes\n"
-           "8. Quitter\n");
-
-
     do {
+        printf("=== Menu ===\n"
+               "1. Affichage de la liste de tous les clients\n"
+               "2. Ajouter des clients\n"
+               "3. Supprimer des clients\n"
+               "4. Modifier les donn\202es d'un client\n"
+               "5. Filtre pour recherche\n"
+               "6. Recherche d'un client\n"
+               "7. Affichage des clients avec donn\202es manquantes\n"
+               "8. Quitter\n\n");
+
+
         scanf("%d", &choix);
         switch (choix) {
             case 1:
@@ -45,12 +43,14 @@ int main(){
                 printf("");
                 break;
             case 8:
-                return 0;
+                break;
             default:
                 printf("Veuillez renter un nombre correcte");
                 break;
         }
-    }while (choix != 7);
+    } while (choix != 8);
+
+    return 0;
 
 
 }
