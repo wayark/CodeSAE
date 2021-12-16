@@ -11,7 +11,6 @@ typedef struct Client{
     char telephone[15];
     char email[50];
     char metier[50];
-
 }CLIENT;
 
 CLIENT *loadClient(CLIENT *client);
