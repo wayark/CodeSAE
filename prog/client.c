@@ -7,11 +7,17 @@ CLIENT *loadClient(CLIENT *client){
 
     int i,mot,champ;
     int j = 0;
+    int ligne = 0;
     char sortie[250];
 
     FILE *fp = fopen("annuaire5000.csv", "r");
 
-    client = (CLIENT *) malloc(5100 * sizeof(CLIENT));
+    while(fgets(sortie, sizeof(sortie), fp)){
+        ligne++;
+    }
+    fseek(fp,0,SEEK_SET);
+
+    client = (CLIENT *) malloc(ligne * sizeof(CLIENT));
 
     while(fgets(sortie, sizeof(sortie), fp)) {
         champ = 0;
@@ -60,11 +66,15 @@ CLIENT *loadClient(CLIENT *client){
     return (client);
 }
 
+
 void showClient(CLIENT *client){
-int i;
+
+    printf("===faire une recherche===")
+
+    int i;
     for (i = 0; i < 5001; i++) {
 
-        printf(" %-15s | %-20s | %-10s | %-6s | %-20s | %-30s | %-20s \n", (client + i)->prenom, (client + i)->nom, (client + i)->ville,
+        printf(" %-15s | %-15s | %-10s | %-6s | %-16s | %-30s | %-20s \n", (client + i)->prenom, (client + i)->nom, (client + i)->ville,
                (client + i)->codePostal,(client + i)->telephone, (client + i)->email, (client + i)->metier);
 
     }

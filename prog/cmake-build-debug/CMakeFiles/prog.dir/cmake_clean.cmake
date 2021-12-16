@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/prog.dir/add.c.obj"
   "CMakeFiles/prog.dir/client.c.obj"
   "CMakeFiles/prog.dir/main.c.obj"
   "libprog.dll.a"

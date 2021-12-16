@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/add.c">
+			<Option target="prog"/>
+		</Unit>
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/add.h">
+			<Option target="prog"/>
+		</Unit>
 		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/client.c">
 			<Option target="prog"/>
 		</Unit>

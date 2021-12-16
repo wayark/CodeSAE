@@ -128,6 +128,30 @@ prog/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/build
 .PHONY : prog/fast
 
+add.obj: add.c.obj
+.PHONY : add.obj
+
+# target to build an object file
+add.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/add.c.obj
+.PHONY : add.c.obj
+
+add.i: add.c.i
+.PHONY : add.i
+
+# target to preprocess a source file
+add.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/add.c.i
+.PHONY : add.c.i
+
+add.s: add.c.s
+.PHONY : add.s
+
+# target to generate assembly for a file
+add.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/add.c.s
+.PHONY : add.c.s
+
 client.obj: client.c.obj
 .PHONY : client.obj
 
@@ -185,6 +209,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... prog
+	@echo ... add.obj
+	@echo ... add.i
+	@echo ... add.s
 	@echo ... client.obj
 	@echo ... client.i
 	@echo ... client.s
