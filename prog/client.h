@@ -13,10 +13,11 @@ typedef struct Client{
     char metier[50];
 }CLIENT;
 
-CLIENT *loadClient(CLIENT *client);
-void showClient(CLIENT *client);
-void showAll(CLIENT *client);
-void Filter(CLIENT *client);
+CLIENT *loadClient(CLIENT *client,int *ligne);
+void showClient(CLIENT *client,int *ligne);
+void showAll(CLIENT *client,int *ligne);
+void Trier(CLIENT *client,int choix);
+void Filter(CLIENT *client, int choix);
 
 
 #endif //PROG_CLIENT_H

@@ -3,8 +3,18 @@
 
 
 int main() {
+    char sortie[100];
+    int ligne = 0;
     CLIENT *client;
-    client = loadClient(client);
+
+    FILE *fp = fopen("petitExemple.csv", "r");
+    while (fgets(sortie, sizeof(sortie), fp)) {
+        ligne++;
+    }
+    fclose(fp);
+
+
+    client = loadClient(client, &ligne);
 
     int choix;
     do {
@@ -22,7 +32,7 @@ int main() {
         scanf("%d", &choix);
         switch (choix) {
             case 1:
-                showClient(client);
+                showClient(client, &ligne);
                 break;
             case 2:
                 printf("");

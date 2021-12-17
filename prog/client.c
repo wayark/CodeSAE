@@ -4,21 +4,16 @@
 #include "client.h"
 
 
-CLIENT *loadClient(CLIENT *client) {
+CLIENT *loadClient(CLIENT *client, int *ligne) {
 
     int i, mot, champ;
     int j = 0;
-    int ligne = 0;
     char sortie[250];
 
-    FILE *fp = fopen("annuaire5000.csv", "r");
+    FILE *fp = fopen("petitExemple.csv", "r");
+    fseek(fp,0,SEEK_SET);
 
-    while (fgets(sortie, sizeof(sortie), fp)) {
-        ligne++;
-    }
-    fseek(fp, 0, SEEK_SET);
-
-    client = (CLIENT *) malloc(ligne * sizeof(CLIENT));
+    client = (CLIENT *) malloc(*ligne * sizeof(CLIENT));
 
     while (fgets(sortie, sizeof(sortie), fp)) {
         champ = 0;
@@ -61,6 +56,7 @@ CLIENT *loadClient(CLIENT *client) {
             mot++;
 
         }
+        (client + j)->metier[mot] = '\0';
         j++;
     }
     fclose(fp);
@@ -68,54 +64,76 @@ CLIENT *loadClient(CLIENT *client) {
 }
 
 
-void showClient(CLIENT *client) {
-    int choix;
-    printf("===faire une recherche===\n"
-           "1. rechercher clients\n"
-           "2. filtrer clients\n"
-           "3. montrer tout les clients\n"
-           "4. montrer les clients avec des champs manquants\n"
-           "5. retourner en arri\202re\n\n");
-
+void showClient(CLIENT *client, int *ligne) {
+    int choix,option;
 
     do {
+        printf("\n\n===faire une recherche===\n"
+               "1. trier liste\n"
+               "2. rechercher clients\n"
+               "3. filtrer clients\n"
+               "4. montrer tout les clients\n"
+               "5. montrer les clients avec des champs manquants\n"
+               "6. retourner en arri\202re\n\n");
         scanf("%d", &choix);
         switch (choix) {
+
+
             case 1:
-                Filter(client);
+                printf("    ===trier par===\n"
+                       "    1. nom\n"
+                       "    2. pr\202nom\n"
+                       "    3. t\202l\202phone\n"
+                       "    4. email\n");
                 break;
             case 2:
-
+                printf("    ===rechercher par===\n"
+                       "    1. nom\n"
+                       "    2. pr\202nom\n"
+                       "    3. t\202l\202phone\n"
+                       "    4. email\n");
+                scanf("%d",&option);
+                Filter(client,option);
                 break;
+
+
             case 3:
-                showAll(client);
+
                 break;
             case 4:
-
+                showAll(client, ligne);
                 break;
             case 5:
+
+                break;
+            case 6:
                 break;
             default:
                 printf("veuillez rentrer un nombre valide");
                 break;
 
         }
-    } while (choix != 5);
+    } while (choix != 6);
 
 
 }
 
-void showAll(CLIENT *client) {
+void showAll(CLIENT *client, int *ligne) {
     int i;
-    for (i = 0; i < 5001; i++) {
+    for (i = 0; i < *ligne - 1; i++) {
 
-        printf(" %-15s | %-15s | %-10s | %-6s | %-16s | %-30s | %-20s \n", (client + i)->prenom, (client + i)->nom,
+        printf(" %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n", (client + i)->prenom, (client + i)->nom,
                (client + i)->ville,
                (client + i)->codePostal, (client + i)->telephone, (client + i)->email, (client + i)->metier);
 
     }
+    return;
 }
 
-void Filter(CLIENT *client){
+void Trier(CLIENT *client,int choix){
+
+}
+
+void Filter(CLIENT *client,int choix){
 
 }
