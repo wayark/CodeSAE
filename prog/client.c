@@ -76,10 +76,6 @@ void showClient(CLIENT *client[], int *ligne) {
                "5. montrer les clients avec des champs manquants\n"
                "6. retourner en arri\202re\n\n");
 
-        showAll(client,ligne);
-        Swap(client,0,1);
-        printf("\n\n\n\n");
-        showAll(client,ligne);
 
         scanf("%d", &choix);
         switch (choix) {
@@ -90,7 +86,8 @@ void showClient(CLIENT *client[], int *ligne) {
                        "    3. t\202l\202phone\n"
                        "    4. email\n");
                 scanf("%d",&option);
-                Trier(client,option);
+                trie(client,option,0,*ligne-2);
+                showAll(client,ligne);
                 break;
             case 2:
                 printf("    ===rechercher par===\n"
@@ -132,5 +129,4 @@ void showAll(CLIENT *client[], int *ligne) {
                client[i]->codePostal, client[i]->telephone, client[i]->email, client[i]->metier);
 
     }
-    return;
 }
