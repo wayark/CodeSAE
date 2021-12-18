@@ -89,6 +89,12 @@
 		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/main.c">
 			<Option target="prog"/>
 		</Unit>
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/trier.c">
+			<Option target="prog"/>
+		</Unit>
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/trier.h">
+			<Option target="prog"/>
+		</Unit>
 		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

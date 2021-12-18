@@ -7,7 +7,12 @@ CMakeFiles/prog.dir/add.c.obj: \
  ../client.h
 CMakeFiles/prog.dir/client.c.obj: \
  ../client.c \
- ../client.h
+ ../client.h \
+ ../trier.h
 CMakeFiles/prog.dir/main.c.obj: \
  ../client.h \
  ../main.c
+CMakeFiles/prog.dir/trier.c.obj: \
+ ../client.h \
+ ../trier.c \
+ ../trier.h

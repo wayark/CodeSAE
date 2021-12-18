@@ -200,6 +200,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/main.c.s
 .PHONY : main.c.s
 
+trier.obj: trier.c.obj
+.PHONY : trier.obj
+
+# target to build an object file
+trier.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/trier.c.obj
+.PHONY : trier.c.obj
+
+trier.i: trier.c.i
+.PHONY : trier.i
+
+# target to preprocess a source file
+trier.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/trier.c.i
+.PHONY : trier.c.i
+
+trier.s: trier.c.s
+.PHONY : trier.s
+
+# target to generate assembly for a file
+trier.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/trier.c.s
+.PHONY : trier.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -218,6 +242,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... trier.obj
+	@echo ... trier.i
+	@echo ... trier.s
 .PHONY : help
 
 
