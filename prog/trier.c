@@ -1,41 +1,36 @@
 #include "trier.h"
-
+#include <string.h>
 
 
 void trie(CLIENT *client[], int choix, int gauche, int droite) {
     int i, j;
-    char pivot;
+    char *pivot;
 
-    pivot = client[(gauche+ droite )/2]->nom[0];
+    pivot = client[(gauche + droite) / 2]->nom;
     i = gauche;
     j = droite;
 
     do {
-
-        while ((client[i]->nom[0] <= pivot) && (i < droite)) {
+        while ((strcmp(client[i]->nom, pivot) <0) && (i < droite)) {
             i++;
         }
-
-        while ((client[j]->nom[0] > pivot) && (j > gauche)) {
+        while ((strcmp(client[j]->nom ,pivot)>0) && (j > gauche)) {
             j--;
         }
-
         if (i <= j) {
             swap(client, i, j);
             i++;
             j--;
         }
-    }while (i <= j);
+    } while (i <= j);
+
 
     if (gauche < j) {
-
         trie(client, choix, gauche, j);
-
     }
+
     if (i < droite) {
-
         trie(client, choix, i, droite);
-
     }
 }
 

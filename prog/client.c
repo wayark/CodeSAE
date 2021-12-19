@@ -10,7 +10,7 @@ void loadClient(CLIENT *client[], int *ligne) {
     int j = 0;
     char sortie[250];
 
-    FILE *fp = fopen("annuaire5000.csv", "r");
+    FILE *fp = fopen("petitExemple.csv", "r");
     fseek(fp,0,SEEK_SET);
 
     while (fgets(sortie, sizeof(sortie), fp)) {
@@ -83,8 +83,8 @@ void showClient(CLIENT *client[], int *ligne) {
                 printf("    ===trier par===\n"
                        "    1. nom\n"
                        "    2. pr\202nom\n"
-                       "    3. t\202l\202phone\n"
-                       "    4. email\n");
+                       "    3. code postal\n"
+                       "    4. profession\n");
                 scanf("%d",&option);
                 trie(client,option,0,*ligne-2);
                 showAll(client,ligne);
