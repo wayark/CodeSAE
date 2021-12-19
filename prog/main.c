@@ -3,11 +3,11 @@
 
 
 int main() {
-    char sortie[100];
+    char sortie[200];
     int ligne = 0;
 
-    FILE *fp = fopen("petitExemple.csv", "r");
-    while (fgets(sortie, sizeof(sortie), fp)) {
+    FILE *fp = fopen("annuaire5000.csv", "r");
+    while (fgets(sortie, sizeof(sortie), fp)!=NULL) {
         ligne++;
     }
     fclose(fp);

@@ -10,7 +10,7 @@ void loadClient(CLIENT *client[], int *ligne) {
     int j = 0;
     char sortie[250];
 
-    FILE *fp = fopen("petitExemple.csv", "r");
+    FILE *fp = fopen("annuaire5000.csv", "r");
     fseek(fp,0,SEEK_SET);
 
     while (fgets(sortie, sizeof(sortie), fp)) {
@@ -124,7 +124,7 @@ void showAll(CLIENT *client[], int *ligne) {
     int i;
     for (i = 0; i < *ligne - 1; i++) {
 
-        printf(" %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n", client[i]->prenom, client[i]->nom,
+        printf("%d    %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n",i, client[i]->prenom, client[i]->nom,
                client[i]->ville,
                client[i]->codePostal, client[i]->telephone, client[i]->email, client[i]->metier);
 
