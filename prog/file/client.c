@@ -74,7 +74,7 @@ void showClient(CLIENT *client[], int *ligne) {
                "3. filtrer clients\n"
                "4. montrer tout les clients\n"
                "5. montrer les clients avec des champs manquants\n"
-               "6. retourner en arri\202re\n\n");
+               "6. retourner en arriere\n\n");
 
 
         scanf("%d", &choix);
@@ -86,9 +86,17 @@ void showClient(CLIENT *client[], int *ligne) {
                        "    3. code postal\n"
                        "    4. profession\n");
                 scanf("%d",&option);
+                if(option > 4){
+                    printf("valeur incorrecte");
+                    break;
+                }
                 trie(client,option,0,*ligne-2);
                 showAll(client,ligne);
                 break;
+
+
+
+                
             case 2:
                 printf("    ===rechercher par===\n"
                        "    1. nom\n"
