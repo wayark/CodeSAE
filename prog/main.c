@@ -6,7 +6,7 @@ int main() {
     char sortie[200];
     int ligne = 0;
 
-    FILE *fp = fopen("petitExemple.csv", "r");
+    FILE *fp = fopen(file, "r");
     while (fgets(sortie, sizeof(sortie), fp)!=NULL) {
         ligne++;
     }

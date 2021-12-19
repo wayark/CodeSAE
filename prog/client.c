@@ -10,7 +10,7 @@ void loadClient(CLIENT *client[], int *ligne) {
     int j = 0;
     char sortie[250];
 
-    FILE *fp = fopen("petitExemple.csv", "r");
+    FILE *fp = fopen(file, "r");
     fseek(fp,0,SEEK_SET);
 
     while (fgets(sortie, sizeof(sortie), fp)) {
