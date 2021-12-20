@@ -118,11 +118,8 @@ void showClient(CLIENT *client[], int *ligne) {
                        "    3. code postal\n"
                        "    4. profession\n");
                 scanf("%d",&option);
-                if(option > 4){
-                    printf("valeur incorrecte");
-                    break;
-                }
-
+                trie(client,option,0,*ligne-1);
+                filter(client,option,*ligne-1);
                 break;
 
 
