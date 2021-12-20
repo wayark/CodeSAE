@@ -10,7 +10,7 @@ typedef struct Client{
     char codePostal[10];
     char telephone[15];
     char email[50];
-    char metier[50];
+    char metier[30];
 }CLIENT;
 
 void loadClient(CLIENT *client[]);

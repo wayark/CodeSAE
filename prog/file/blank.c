@@ -4,7 +4,7 @@
 void blankClient(CLIENT *client[], int taille){
     int i=0;
     int compt = 0;
-    while (i < taille-1){
+    while (i < taille-1){   //tant que ce n'est pas la fin du tableau
         if(client[i]->prenom[0]=='\0'|| client[i]->nom[0]=='\0' || client[i]->ville[0]=='\0'|| client[i]->codePostal[0]=='\0'||
                 client[i]->telephone[0]=='\0'|| client[i]->email[0]=='\0'|| client[i]->metier[0]=='\0'){
 

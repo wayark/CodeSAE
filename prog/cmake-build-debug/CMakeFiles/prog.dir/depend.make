@@ -21,6 +21,7 @@ CMakeFiles/prog.dir/file/filter.c.obj: \
  ../file/filter.c \
  ../file/filter.h
 CMakeFiles/prog.dir/file/main.c.obj: \
+ ../file/add.h \
  ../file/client.h \
  ../file/main.c
 CMakeFiles/prog.dir/file/search.c.obj: \

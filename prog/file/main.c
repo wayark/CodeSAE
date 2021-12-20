@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "client.h"
+#include "add.h"
 
 
 int main() {
@@ -16,7 +17,7 @@ int main() {
 
     int choix;
     do {
-        printf("=== Menu ===\n"
+        printf("\n\n=== Menu ===\n"
                "1. Affichage des clients\n"
                "2. Ajouter des clients\n"
                "3. Supprimer des clients\n"
@@ -30,7 +31,9 @@ int main() {
                 showClient(client, &ligne);
                 break;
             case 2:
-                printf("");
+                addClient(client,&ligne);
+                showAll(client,&ligne);
+
                 break;
             case 3:
                 printf("");

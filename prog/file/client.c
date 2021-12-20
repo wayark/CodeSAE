@@ -89,7 +89,7 @@ void showClient(CLIENT *client[], int *ligne) {
                        "    3. code postal\n"
                        "    4. profession\n");
                 scanf("%d",&option);
-                if(option > 4){
+                if(option > 4|| option <1){
                     printf("valeur incorrecte");
                     break;
                 }
@@ -105,6 +105,10 @@ void showClient(CLIENT *client[], int *ligne) {
                        "    3. t\202l\202phone\n"
                        "    4. email\n");
                 scanf("%d",&option);
+                if(option > 4|| option <1){
+                    printf("valeur incorrecte");
+                    break;
+                }
                 trie(client,option,0,*ligne-1);
                 search(client,option,ligne);
                 break;
@@ -117,6 +121,10 @@ void showClient(CLIENT *client[], int *ligne) {
                        "    3. code postal\n"
                        "    4. profession\n");
                 scanf("%d",&option);
+                if(option > 4 || option <1){
+                    printf("valeur incorrecte");
+                    break;
+                }
                 trie(client,option,0,*ligne-1);
                 filter(client,option,*ligne-1);
                 break;
@@ -148,9 +156,9 @@ void showAll(CLIENT *client[], int *ligne) {
     int i;
     printf(" %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n","prenom","nom","ville","code postal","telephone","email","metier");
     printf("%-100s","============================================================================================================================================================\n");
-    for (i = 0; i < *ligne - 1; i++) {
+    for (i = 0; i < *ligne; i++) {
 
-        printf(" %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n", client[i]->prenom, client[i]->nom,
+        printf("%d  %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n\n",i, client[i]->prenom, client[i]->nom,
                client[i]->ville,
                client[i]->codePostal, client[i]->telephone, client[i]->email, client[i]->metier);
 
