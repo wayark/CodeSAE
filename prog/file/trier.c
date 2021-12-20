@@ -13,12 +13,12 @@ void trie(CLIENT *client[], int choix, int gauche, int droite) {
 
     switch (choix) {    //choix va permettre de trier selon le choix de l'utilisateur
         case 1:
-            pivot = client[(gauche + droite) / 2]->prenom;
+            pivot = client[(gauche + droite) / 2]->nom;
             do {
-                while ((strcmp(client[i]->prenom, pivot) <0) && (i < droite)) {
+                while ((strcmp(client[i]->nom, pivot) <0) && (i < droite)) {
                     i++;
                 }
-                while ((strcmp(client[j]->prenom ,pivot)>0) && (j > gauche)) {
+                while ((strcmp(client[j]->nom ,pivot)>0) && (j > gauche)) {
                     j--;
                 }
                 if (i <= j) {
@@ -31,12 +31,12 @@ void trie(CLIENT *client[], int choix, int gauche, int droite) {
 
 
         case 2:
-            pivot = client[(gauche + droite) / 2]->nom;
+            pivot = client[(gauche + droite) / 2]->prenom;
             do {
-                while ((strcmp(client[i]->nom, pivot) <0) && (i < droite)) {
+                while ((strcmp(client[i]->prenom, pivot) <0) && (i < droite)) {
                     i++;
                 }
-                while ((strcmp(client[j]->nom ,pivot)>0) && (j > gauche)) {
+                while ((strcmp(client[j]->prenom ,pivot)>0) && (j > gauche)) {
                     j--;
                 }
                 if (i <= j) {

@@ -12,8 +12,7 @@ int main() {
     }
     fclose(fp);
     CLIENT *client[ligne];
-    loadClient(client, &ligne);
-
+    loadClient(client);
 
     int choix;
     do {

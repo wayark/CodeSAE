@@ -2,7 +2,7 @@
 
 #ifndef PROG_CLIENT_H
 #define PROG_CLIENT_H
-#define file "annuaire5000.csv"
+#define file "petitExemple.csv"
 typedef struct Client{
     char prenom[20] ;
     char nom[30];
@@ -13,7 +13,7 @@ typedef struct Client{
     char metier[50];
 }CLIENT;
 
-void loadClient(CLIENT *client[],int *ligne);
+void loadClient(CLIENT *client[]);
 void showClient(CLIENT *client[],int *ligne);
 void showAll(CLIENT *client[],int *ligne);
 

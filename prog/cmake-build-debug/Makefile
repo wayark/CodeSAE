@@ -128,101 +128,149 @@ prog/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/build
 .PHONY : prog/fast
 
-add.obj: add.c.obj
-.PHONY : add.obj
+file/add.obj: file/add.c.obj
+.PHONY : file/add.obj
 
 # target to build an object file
-add.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/add.c.obj
-.PHONY : add.c.obj
+file/add.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/add.c.obj
+.PHONY : file/add.c.obj
 
-add.i: add.c.i
-.PHONY : add.i
+file/add.i: file/add.c.i
+.PHONY : file/add.i
 
 # target to preprocess a source file
-add.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/add.c.i
-.PHONY : add.c.i
+file/add.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/add.c.i
+.PHONY : file/add.c.i
 
-add.s: add.c.s
-.PHONY : add.s
+file/add.s: file/add.c.s
+.PHONY : file/add.s
 
 # target to generate assembly for a file
-add.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/add.c.s
-.PHONY : add.c.s
+file/add.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/add.c.s
+.PHONY : file/add.c.s
 
-client.obj: client.c.obj
-.PHONY : client.obj
+file/client.obj: file/client.c.obj
+.PHONY : file/client.obj
 
 # target to build an object file
-client.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/client.c.obj
-.PHONY : client.c.obj
+file/client.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/client.c.obj
+.PHONY : file/client.c.obj
 
-client.i: client.c.i
-.PHONY : client.i
+file/client.i: file/client.c.i
+.PHONY : file/client.i
 
 # target to preprocess a source file
-client.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/client.c.i
-.PHONY : client.c.i
+file/client.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/client.c.i
+.PHONY : file/client.c.i
 
-client.s: client.c.s
-.PHONY : client.s
+file/client.s: file/client.c.s
+.PHONY : file/client.s
 
 # target to generate assembly for a file
-client.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/client.c.s
-.PHONY : client.c.s
+file/client.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/client.c.s
+.PHONY : file/client.c.s
 
-main.obj: main.c.obj
-.PHONY : main.obj
+file/filter.obj: file/filter.c.obj
+.PHONY : file/filter.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/main.c.obj
-.PHONY : main.c.obj
+file/filter.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/filter.c.obj
+.PHONY : file/filter.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+file/filter.i: file/filter.c.i
+.PHONY : file/filter.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/main.c.i
-.PHONY : main.c.i
+file/filter.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/filter.c.i
+.PHONY : file/filter.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+file/filter.s: file/filter.c.s
+.PHONY : file/filter.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/main.c.s
-.PHONY : main.c.s
+file/filter.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/filter.c.s
+.PHONY : file/filter.c.s
 
-trier.obj: trier.c.obj
-.PHONY : trier.obj
+file/main.obj: file/main.c.obj
+.PHONY : file/main.obj
 
 # target to build an object file
-trier.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/trier.c.obj
-.PHONY : trier.c.obj
+file/main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/main.c.obj
+.PHONY : file/main.c.obj
 
-trier.i: trier.c.i
-.PHONY : trier.i
+file/main.i: file/main.c.i
+.PHONY : file/main.i
 
 # target to preprocess a source file
-trier.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/trier.c.i
-.PHONY : trier.c.i
+file/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/main.c.i
+.PHONY : file/main.c.i
 
-trier.s: trier.c.s
-.PHONY : trier.s
+file/main.s: file/main.c.s
+.PHONY : file/main.s
 
 # target to generate assembly for a file
-trier.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/trier.c.s
-.PHONY : trier.c.s
+file/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/main.c.s
+.PHONY : file/main.c.s
+
+file/search.obj: file/search.c.obj
+.PHONY : file/search.obj
+
+# target to build an object file
+file/search.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/search.c.obj
+.PHONY : file/search.c.obj
+
+file/search.i: file/search.c.i
+.PHONY : file/search.i
+
+# target to preprocess a source file
+file/search.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/search.c.i
+.PHONY : file/search.c.i
+
+file/search.s: file/search.c.s
+.PHONY : file/search.s
+
+# target to generate assembly for a file
+file/search.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/search.c.s
+.PHONY : file/search.c.s
+
+file/trier.obj: file/trier.c.obj
+.PHONY : file/trier.obj
+
+# target to build an object file
+file/trier.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/trier.c.obj
+.PHONY : file/trier.c.obj
+
+file/trier.i: file/trier.c.i
+.PHONY : file/trier.i
+
+# target to preprocess a source file
+file/trier.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/trier.c.i
+.PHONY : file/trier.c.i
+
+file/trier.s: file/trier.c.s
+.PHONY : file/trier.s
+
+# target to generate assembly for a file
+file/trier.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/trier.c.s
+.PHONY : file/trier.c.s
 
 # Help Target
 help:
@@ -233,18 +281,24 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... prog
-	@echo ... add.obj
-	@echo ... add.i
-	@echo ... add.s
-	@echo ... client.obj
-	@echo ... client.i
-	@echo ... client.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... trier.obj
-	@echo ... trier.i
-	@echo ... trier.s
+	@echo ... file/add.obj
+	@echo ... file/add.i
+	@echo ... file/add.s
+	@echo ... file/client.obj
+	@echo ... file/client.i
+	@echo ... file/client.s
+	@echo ... file/filter.obj
+	@echo ... file/filter.i
+	@echo ... file/filter.s
+	@echo ... file/main.obj
+	@echo ... file/main.i
+	@echo ... file/main.s
+	@echo ... file/search.obj
+	@echo ... file/search.i
+	@echo ... file/search.s
+	@echo ... file/trier.obj
+	@echo ... file/trier.i
+	@echo ... file/trier.s
 .PHONY : help
 
 

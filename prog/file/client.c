@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include "client.h"
 #include "trier.h"
+#include "filter.h"
+#include "search.h"
 
 
-void loadClient(CLIENT *client[], int *ligne) {
+void loadClient(CLIENT *client[]) {
 
     int i, mot, champ;
     int j = 0;
@@ -90,13 +92,13 @@ void showClient(CLIENT *client[], int *ligne) {
                     printf("valeur incorrecte");
                     break;
                 }
-                trie(client,option,0,*ligne-2);
+                trie(client,option,0,*ligne-1);
                 showAll(client,ligne);
                 break;
 
 
 
-                
+
             case 2:
                 printf("    ===rechercher par===\n"
                        "    1. nom\n"
@@ -104,12 +106,27 @@ void showClient(CLIENT *client[], int *ligne) {
                        "    3. t\202l\202phone\n"
                        "    4. email\n");
                 scanf("%d",&option);
+                trie(client,option,0,*ligne-1);
+                search(client,option,ligne);
                 break;
 
 
             case 3:
+                printf("    ===filtrer par===\n"
+                       "    1. nom\n"
+                       "    2. pr\202nom\n"
+                       "    3. code postal\n"
+                       "    4. profession\n");
+                scanf("%d",&option);
+                if(option > 4){
+                    printf("valeur incorrecte");
+                    break;
+                }
 
                 break;
+
+
+
             case 4:
                 showAll(client, ligne);
                 break;
@@ -130,9 +147,11 @@ void showClient(CLIENT *client[], int *ligne) {
 
 void showAll(CLIENT *client[], int *ligne) {
     int i;
+    printf(" %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n","prenom","nom","ville","code postal","telephone","email","metier");
+    printf("%-100s","============================================================================================================================================================\n");
     for (i = 0; i < *ligne - 1; i++) {
 
-        printf("%d    %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n",i, client[i]->prenom, client[i]->nom,
+        printf(" %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n", client[i]->prenom, client[i]->nom,
                client[i]->ville,
                client[i]->codePostal, client[i]->telephone, client[i]->email, client[i]->metier);
 

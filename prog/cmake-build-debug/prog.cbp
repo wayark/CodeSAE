@@ -74,25 +74,37 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/add.c">
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/add.c">
 			<Option target="prog"/>
 		</Unit>
-		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/add.h">
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/add.h">
 			<Option target="prog"/>
 		</Unit>
-		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/client.c">
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/client.c">
 			<Option target="prog"/>
 		</Unit>
-		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/client.h">
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/client.h">
 			<Option target="prog"/>
 		</Unit>
-		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/main.c">
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/filter.c">
 			<Option target="prog"/>
 		</Unit>
-		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/trier.c">
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/filter.h">
 			<Option target="prog"/>
 		</Unit>
-		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/trier.h">
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/main.c">
+			<Option target="prog"/>
+		</Unit>
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/search.c">
+			<Option target="prog"/>
+		</Unit>
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/search.h">
+			<Option target="prog"/>
+		</Unit>
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/trier.c">
+			<Option target="prog"/>
+		</Unit>
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/trier.h">
 			<Option target="prog"/>
 		</Unit>
 		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/CMakeLists.txt">
