@@ -5,7 +5,12 @@ CMakeFiles/prog.dir/file/add.c.obj: \
  ../file/add.c \
  ../file/add.h \
  ../file/client.h
+CMakeFiles/prog.dir/file/blank.c.obj: \
+ ../file/blank.c \
+ ../file/blank.h \
+ ../file/client.h
 CMakeFiles/prog.dir/file/client.c.obj: \
+ ../file/blank.h \
  ../file/client.c \
  ../file/client.h \
  ../file/filter.h \

@@ -4,6 +4,7 @@
 #include "trier.h"
 #include "filter.h"
 #include "search.h"
+#include "blank.h"
 
 
 void loadClient(CLIENT *client[]) {
@@ -97,8 +98,6 @@ void showClient(CLIENT *client[], int *ligne) {
                 break;
 
 
-
-
             case 2:
                 printf("    ===rechercher par===\n"
                        "    1. nom\n"
@@ -127,9 +126,12 @@ void showClient(CLIENT *client[], int *ligne) {
             case 4:
                 showAll(client, ligne);
                 break;
-            case 5:
 
+            case 5:
+                blankClient(client,*ligne);
                 break;
+
+
             case 6:
                 break;
             default:

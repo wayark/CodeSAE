@@ -152,6 +152,30 @@ file/add.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/add.c.s
 .PHONY : file/add.c.s
 
+file/blank.obj: file/blank.c.obj
+.PHONY : file/blank.obj
+
+# target to build an object file
+file/blank.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/blank.c.obj
+.PHONY : file/blank.c.obj
+
+file/blank.i: file/blank.c.i
+.PHONY : file/blank.i
+
+# target to preprocess a source file
+file/blank.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/blank.c.i
+.PHONY : file/blank.c.i
+
+file/blank.s: file/blank.c.s
+.PHONY : file/blank.s
+
+# target to generate assembly for a file
+file/blank.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/blank.c.s
+.PHONY : file/blank.c.s
+
 file/client.obj: file/client.c.obj
 .PHONY : file/client.obj
 
@@ -284,6 +308,9 @@ help:
 	@echo ... file/add.obj
 	@echo ... file/add.i
 	@echo ... file/add.s
+	@echo ... file/blank.obj
+	@echo ... file/blank.i
+	@echo ... file/blank.s
 	@echo ... file/client.obj
 	@echo ... file/client.i
 	@echo ... file/client.s

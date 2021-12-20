@@ -80,6 +80,12 @@
 		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/add.h">
 			<Option target="prog"/>
 		</Unit>
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/blank.c">
+			<Option target="prog"/>
+		</Unit>
+		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/blank.h">
+			<Option target="prog"/>
+		</Unit>
 		<Unit filename="C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/client.c">
 			<Option target="prog"/>
 		</Unit>

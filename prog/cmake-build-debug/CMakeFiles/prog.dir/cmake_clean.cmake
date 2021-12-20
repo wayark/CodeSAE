@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/prog.dir/file/add.c.obj"
+  "CMakeFiles/prog.dir/file/blank.c.obj"
   "CMakeFiles/prog.dir/file/client.c.obj"
   "CMakeFiles/prog.dir/file/filter.c.obj"
   "CMakeFiles/prog.dir/file/main.c.obj"
