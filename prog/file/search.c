@@ -3,8 +3,8 @@
 #include <string.h>
 
 void search(CLIENT *client[], int choix, int *ligne){
-    char search[25];
-    printf("\n\ntapez le mot a rechercher: ");
+    char search[30];
+    printf("tapez un mot a rechercher: ");
     scanf("%s",search);
     int start = 0;
     int end = *ligne-1;

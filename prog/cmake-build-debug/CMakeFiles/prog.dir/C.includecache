@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/add.c
-add.h
-C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/add.h
-stdio.h
--
-stdlib.h
--
-
-C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/add.h
-client.h
-C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/client.h
-
 C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/client.c
 stdio.h
 -
@@ -46,12 +34,6 @@ C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/fil
 client.h
 C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/client.h
 
-C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/main.c
-stdio.h
--
-client.h
-C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/client.h
-
 C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/search.c
 search.h
 C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/search.h
@@ -63,14 +45,6 @@ string.h
 C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/search.h
 client.h
 C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/client.h
-
-C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/trier.c
-trier.h
-C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/trier.h
-string.h
--
-stdio.h
--
 
 C:/Users/liaml/Desktop/cours/sae/1-2 algo et c/AnnuaireSae/CodeSAE/prog/file/trier.h
 client.h
