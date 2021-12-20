@@ -7,7 +7,7 @@ void addClient(CLIENT *client[], int *ligne){
 
     client[*ligne] = (CLIENT *) malloc(sizeof(CLIENT)); //aloue une nouvelle case dans la mémoire au rang 5001(*ligne)
                                                             // car le tableau va de 0 a 5000
-    char prenom[20] = "", nom[30] = "", ville[20] = "", codePostal[10] = "", telephone[15] = "", email[50] = "", metier[30] = "";
+    char prenom[20], nom[30], ville[20], codePostal[10], telephone[15], email[50], metier[30];
     printf("Si vous ne connaissez pas l'information metter : '.'\n");
 
     do
