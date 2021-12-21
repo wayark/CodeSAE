@@ -248,6 +248,30 @@ file/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/main.c.s
 .PHONY : file/main.c.s
 
+file/modifier.obj: file/modifier.c.obj
+.PHONY : file/modifier.obj
+
+# target to build an object file
+file/modifier.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/modifier.c.obj
+.PHONY : file/modifier.c.obj
+
+file/modifier.i: file/modifier.c.i
+.PHONY : file/modifier.i
+
+# target to preprocess a source file
+file/modifier.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/modifier.c.i
+.PHONY : file/modifier.c.i
+
+file/modifier.s: file/modifier.c.s
+.PHONY : file/modifier.s
+
+# target to generate assembly for a file
+file/modifier.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/modifier.c.s
+.PHONY : file/modifier.c.s
+
 file/search.obj: file/search.c.obj
 .PHONY : file/search.obj
 
@@ -320,6 +344,9 @@ help:
 	@echo ... file/main.obj
 	@echo ... file/main.i
 	@echo ... file/main.s
+	@echo ... file/modifier.obj
+	@echo ... file/modifier.i
+	@echo ... file/modifier.s
 	@echo ... file/search.obj
 	@echo ... file/search.i
 	@echo ... file/search.s

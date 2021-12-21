@@ -14,7 +14,7 @@ void addClient(CLIENT *client[], int *ligne){
     {
         printf("Entrer le pr\202nom :");
         scanf("%s",prenom);
-    } while(strlen(prenom)>21);
+    } while(strlen(prenom)>20);
     if(prenom[0] == '.')
         prenom[0] = ' ';
     sscanf(prenom,"%s",client[*ligne]->prenom); //met mot taper dans la case associer
@@ -23,7 +23,7 @@ void addClient(CLIENT *client[], int *ligne){
     {
         printf("Entrer le nom :");
         scanf("%s",nom);
-    } while(strlen(nom)>31);
+    } while(strlen(nom)>30);
     if(nom[0] == '.')
         nom[0] = ' ';
     sscanf(nom,"%s",client[*ligne]->nom);
@@ -32,7 +32,7 @@ void addClient(CLIENT *client[], int *ligne){
     {
         printf("Entrer la ville :");
         scanf("%s",ville);
-    } while(strlen(ville)>21);
+    } while(strlen(ville)>20);
     if(ville[0] == '.')
         ville[0] = ' ';
     sscanf(ville,"%s",client[*ligne]->ville);
@@ -59,7 +59,7 @@ void addClient(CLIENT *client[], int *ligne){
     {
         printf("Entrer l'email :");
         scanf("%s",email);
-    } while(strlen(email)>51);
+    } while(strlen(email)>50);
     if(email[0] == '.')
         email[0] = ' ';
     sscanf(email,"%s",client[*ligne]->email);
@@ -68,7 +68,7 @@ void addClient(CLIENT *client[], int *ligne){
     {
         printf("Entrer le m\202tier :");
         scanf("%s",metier);
-    } while(strlen(metier)>31);
+    } while(strlen(metier)>30);
     if(metier[0] == '.')
         metier[0] = ' ';
     sscanf(metier,"%s",client[*ligne]->metier);

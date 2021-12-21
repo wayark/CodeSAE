@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/prog.dir/file/filter.c.obj.d"
   "CMakeFiles/prog.dir/file/main.c.obj"
   "CMakeFiles/prog.dir/file/main.c.obj.d"
+  "CMakeFiles/prog.dir/file/modifier.c.obj"
+  "CMakeFiles/prog.dir/file/modifier.c.obj.d"
   "CMakeFiles/prog.dir/file/search.c.obj"
   "CMakeFiles/prog.dir/file/search.c.obj.d"
   "CMakeFiles/prog.dir/file/trier.c.obj"

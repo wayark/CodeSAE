@@ -103,6 +103,12 @@
 		<Unit filename="D:/Users/Mateo/CLionProjects/PROJET-C/CodeSAE/prog/file/main.c">
 			<Option target="prog"/>
 		</Unit>
+		<Unit filename="D:/Users/Mateo/CLionProjects/PROJET-C/CodeSAE/prog/file/modifier.c">
+			<Option target="prog"/>
+		</Unit>
+		<Unit filename="D:/Users/Mateo/CLionProjects/PROJET-C/CodeSAE/prog/file/modifier.h">
+			<Option target="prog"/>
+		</Unit>
 		<Unit filename="D:/Users/Mateo/CLionProjects/PROJET-C/CodeSAE/prog/file/search.c">
 			<Option target="prog"/>
 		</Unit>

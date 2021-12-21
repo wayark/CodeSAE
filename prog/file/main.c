@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "client.h"
 #include "add.h"
+#include "modifier.h"
 
 
 int main() {
@@ -33,13 +34,12 @@ int main() {
             case 2:
                 addClient(client,&ligne);
                 showAll(client,&ligne);
-
                 break;
             case 3:
                 printf("");
                 break;
             case 4:
-                printf("");
+                modifierClient(client,&ligne);
                 break;
             case 5:
                 break;
@@ -47,7 +47,7 @@ int main() {
                 printf("Veuillez renter un nombre correcte");
                 break;
         }
-    } while (choix != 5);
+    } while (choix > 5);
 
     return 0;
 

@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 
-void search(CLIENT *client[], int choix, int *ligne){
-    char search[30];
+int search(CLIENT *client[], int choix, int *ligne){
+    char search[50];
     printf("tapez un mot a rechercher: ");//demande de string a rechercher
     scanf("%s",search);
     int start = 0;
-    int end = *ligne-1;// délimite début e fin de tableau
+    int end = *ligne-1;// délimite début et fin de tableau
 
     switch (choix) { //switch permettant de choisir recherche:nom, prenom, telephone et email
         case 1:
@@ -18,7 +18,7 @@ void search(CLIENT *client[], int choix, int *ligne){
                     //printf("salut");
                     printf("\n  %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n", client[middle]->prenom, client[middle]->nom,
                            client[middle]->ville,client[middle]->codePostal, client[middle]->telephone, client[middle]->email, client[middle]->metier);
-                    return;
+                    return middle;
                 }
                 else if(strcmp(client[middle]->nom ,search)< 0){        // si le mot est plus petit que le mot recherché l'indice de début
                     start = middle + 1;                                 // est égal a l'indice du milieu
@@ -37,7 +37,7 @@ void search(CLIENT *client[], int choix, int *ligne){
                     //printf("salut");
                     printf("\n  %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n", client[middle]->prenom, client[middle]->nom,
                            client[middle]->ville,client[middle]->codePostal, client[middle]->telephone, client[middle]->email, client[middle]->metier);
-                    return;
+                    return middle;
                 }
                 else if(strcmp(client[middle]->prenom ,search)< 0){
                     start = middle + 1;
@@ -55,7 +55,7 @@ void search(CLIENT *client[], int choix, int *ligne){
                 if(strcmp(client[middle]->telephone ,search) == 0){
                     printf("\n  %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n", client[middle]->prenom, client[middle]->nom,
                            client[middle]->ville,client[middle]->codePostal, client[middle]->telephone, client[middle]->email, client[middle]->metier);
-                    return;
+                    return middle;
                 }
                 else if(strcmp(client[middle]->telephone ,search)< 0){
                     start = middle + 1;
@@ -74,7 +74,7 @@ void search(CLIENT *client[], int choix, int *ligne){
                     //printf("salut");
                     printf("\n  %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n", client[middle]->prenom, client[middle]->nom,
                            client[middle]->ville,client[middle]->codePostal, client[middle]->telephone, client[middle]->email, client[middle]->metier);
-                    return;
+                    return middle;
                 }
                 else if(strcmp(client[middle]->email ,search)< 0){
                     start = middle + 1;
@@ -86,9 +86,10 @@ void search(CLIENT *client[], int choix, int *ligne){
             }
             break;
         default:
-            return;
+            return -1;
     }
 
     printf("mot non trouve");
+    return -1;
 }
 
