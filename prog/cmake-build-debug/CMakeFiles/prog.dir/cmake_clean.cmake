@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/prog.dir/file/modifier.c.obj.d"
   "CMakeFiles/prog.dir/file/search.c.obj"
   "CMakeFiles/prog.dir/file/search.c.obj.d"
+  "CMakeFiles/prog.dir/file/supprimer.c.obj"
+  "CMakeFiles/prog.dir/file/supprimer.c.obj.d"
   "CMakeFiles/prog.dir/file/trier.c.obj"
   "CMakeFiles/prog.dir/file/trier.c.obj.d"
   "libprog.dll.a"

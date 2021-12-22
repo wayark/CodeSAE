@@ -115,6 +115,12 @@
 		<Unit filename="D:/Users/Mateo/CLionProjects/PROJET-C/CodeSAE/prog/file/search.h">
 			<Option target="prog"/>
 		</Unit>
+		<Unit filename="D:/Users/Mateo/CLionProjects/PROJET-C/CodeSAE/prog/file/supprimer.c">
+			<Option target="prog"/>
+		</Unit>
+		<Unit filename="D:/Users/Mateo/CLionProjects/PROJET-C/CodeSAE/prog/file/supprimer.h">
+			<Option target="prog"/>
+		</Unit>
 		<Unit filename="D:/Users/Mateo/CLionProjects/PROJET-C/CodeSAE/prog/file/trier.c">
 			<Option target="prog"/>
 		</Unit>

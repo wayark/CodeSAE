@@ -296,6 +296,30 @@ file/search.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/search.c.s
 .PHONY : file/search.c.s
 
+file/supprimer.obj: file/supprimer.c.obj
+.PHONY : file/supprimer.obj
+
+# target to build an object file
+file/supprimer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/supprimer.c.obj
+.PHONY : file/supprimer.c.obj
+
+file/supprimer.i: file/supprimer.c.i
+.PHONY : file/supprimer.i
+
+# target to preprocess a source file
+file/supprimer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/supprimer.c.i
+.PHONY : file/supprimer.c.i
+
+file/supprimer.s: file/supprimer.c.s
+.PHONY : file/supprimer.s
+
+# target to generate assembly for a file
+file/supprimer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prog.dir\build.make CMakeFiles/prog.dir/file/supprimer.c.s
+.PHONY : file/supprimer.c.s
+
 file/trier.obj: file/trier.c.obj
 .PHONY : file/trier.obj
 
@@ -350,6 +374,9 @@ help:
 	@echo ... file/search.obj
 	@echo ... file/search.i
 	@echo ... file/search.s
+	@echo ... file/supprimer.obj
+	@echo ... file/supprimer.i
+	@echo ... file/supprimer.s
 	@echo ... file/trier.obj
 	@echo ... file/trier.i
 	@echo ... file/trier.s

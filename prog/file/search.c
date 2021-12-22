@@ -4,7 +4,7 @@
 
 int search(CLIENT *client[], int choix, int *ligne){
     char search[50];
-    printf("tapez un mot a rechercher: ");//demande de string a rechercher
+    printf("Tapez un mot a rechercher: ");//demande de string a rechercher
     scanf("%s",search);
     int start = 0;
     int end = *ligne-1;// délimite début et fin de tableau

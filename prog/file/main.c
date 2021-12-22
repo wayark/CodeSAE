@@ -2,6 +2,7 @@
 #include "client.h"
 #include "add.h"
 #include "modifier.h"
+#include "supprimer.h"
 
 
 int main() {
@@ -36,7 +37,7 @@ int main() {
                 showAll(client,&ligne);
                 break;
             case 3:
-                printf("");
+                supprimer(client,&ligne);
                 break;
             case 4:
                 modifierClient(client,&ligne);
