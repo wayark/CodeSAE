@@ -14,7 +14,11 @@ int main() {
         ligne++;
     }
     fclose(fp);
+
+
     CLIENT *client[ligne];
+
+
     loadClient(client);
 
     int choix;
@@ -48,7 +52,7 @@ int main() {
                 printf("Veuillez renter un nombre correcte");
                 break;
         }
-    } while (choix > 5);
+    } while (choix < 5);
 
     return 0;
 

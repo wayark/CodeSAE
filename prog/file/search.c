@@ -1,4 +1,5 @@
 #include "search.h"
+#include "trier.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -11,6 +12,7 @@ int search(CLIENT *client[], int choix, int *ligne){
 
     switch (choix) { //switch permettant de choisir recherche:nom, prenom, telephone et email
         case 1:
+            trie(client,choix,0,*ligne-1);
             while (start < end){
                 int middle = (start + end)/2;
 
@@ -30,6 +32,7 @@ int search(CLIENT *client[], int choix, int *ligne){
             }
             break;
         case 2:
+            trie(client,choix,0,*ligne-1);
             while (start < end){
                 int middle = (start + end)/2;
 
@@ -49,6 +52,7 @@ int search(CLIENT *client[], int choix, int *ligne){
             }
             break;
         case 3:
+            trie(client,5,0,*ligne-1);
             while (start < end){
                 int middle = (start + end)/2;
 
@@ -67,6 +71,7 @@ int search(CLIENT *client[], int choix, int *ligne){
             }
             break;
         case 4:
+            trie(client,6,0,*ligne-1);
             while (start < end){
                 int middle = (start + end)/2;
 

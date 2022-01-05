@@ -41,7 +41,7 @@ void addClient(CLIENT *client[], int *ligne){
     {
         printf("Entrer le code postal (5 chiffres) :");
         scanf("%s",codePostal);
-    } while((strlen(codePostal)!=5) && (codePostal[0] != '.'));
+    } while((strlen(codePostal)!=5) && (codePostal[0] != '.') );
     if(codePostal[0] == '.')
         codePostal[0] = ' ';
     sscanf(codePostal,"%s",client[*ligne]->codePostal);
@@ -50,7 +50,7 @@ void addClient(CLIENT *client[], int *ligne){
     {
         printf("Entrer le telephone sous la forme : 06.00.00.00.00 :");
         scanf("%s",telephone);
-    } while(strlen(telephone)!=14 && (telephone[0] != '.'));
+    } while((strlen(telephone)!=14 || (telephone[2]!='.') || (telephone[5]!='.') || (telephone[8]!='.') || (telephone[11]!='.')) && (telephone[0] != '.') );
     if(telephone[0] == '.')
         telephone[0] = ' ';
     sscanf(telephone,"%s",client[*ligne]->telephone);

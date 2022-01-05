@@ -25,8 +25,9 @@ void modifierClient(CLIENT *client[],int *ligne)
         }
         ModifierLaLigne(client,ligne_client);
         showAll(client,ligne);
-        printf("\n  %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n", client[ligne_client]->prenom, client[ligne_client]->nom,
+        printf("\n\n  %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n", client[ligne_client]->prenom, client[ligne_client]->nom,
                client[ligne_client]->ville,client[ligne_client]->codePostal, client[ligne_client]->telephone, client[ligne_client]->email, client[ligne_client]->metier);
+
     }
     else
     {

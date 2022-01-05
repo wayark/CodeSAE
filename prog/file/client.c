@@ -109,7 +109,6 @@ void showClient(CLIENT *client[], int *ligne) {
                     printf("valeur incorrecte");
                     break;
                 }
-                trie(client,option,0,*ligne-1);
                 search(client,option,ligne);
                 break;
 
