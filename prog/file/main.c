@@ -3,6 +3,7 @@
 #include "add.h"
 #include "modifier.h"
 #include "supprimer.h"
+#include "save.h"
 
 
 int main() {
@@ -28,7 +29,8 @@ int main() {
                "2. Ajouter des clients\n"
                "3. Supprimer des clients\n"
                "4. Modifier les donn\202es d'un client\n"
-               "5. Quitter\n\n");
+               "5. Sauvegarder\n"
+               "6. Quitter\n\n");
 
 
         scanf("%d", &choix);
@@ -47,12 +49,15 @@ int main() {
                 modifierClient(client,&ligne);
                 break;
             case 5:
+                saveFile(client, &ligne);
+                break;
+            case 6:
                 break;
             default:
                 printf("Veuillez renter un nombre correcte");
                 break;
         }
-    } while (choix < 5);
+    } while (choix < 6);
 
     return 0;
 
