@@ -13,7 +13,7 @@ typedef struct Client{
     char metier[30];
 }CLIENT;
 
-void loadClient(CLIENT *client[]);
+void loadClient(CLIENT *client[],char chemin[]);
 void showClient(CLIENT *client[],int *ligne);
 void showAll(CLIENT *client[],int *ligne);
 

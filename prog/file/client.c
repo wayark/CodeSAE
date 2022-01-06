@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "client.h"
 #include "trier.h"
 #include "filter.h"
@@ -7,13 +8,13 @@
 #include "blank.h"
 
 
-void loadClient(CLIENT *client[]) {
+void loadClient(CLIENT *client[], char chemin[]) {
 
     int i, mot, champ;
     int j = 0;
     char sortie[250];
 
-    FILE *fp = fopen(file, "r");
+    FILE *fp = fopen(chemin, "r");
     fseek(fp,0,SEEK_SET);
 
     while (fgets(sortie, sizeof(sortie), fp)) {
@@ -71,42 +72,50 @@ void showClient(CLIENT *client[], int *ligne) {
     int choix,option;
 
     do {
-        printf("\n\n===faire une recherche===\n"
-               "1. trier liste\n"
-               "2. rechercher clients\n"
-               "3. filtrer clients\n"
-               "4. montrer tout les clients\n"
-               "5. montrer les clients avec des champs manquants\n"
-               "6. retourner en arriere\n\n");
+        printf("\n\n===Faire une recherche===\n"
+               "1. Trier liste\n"
+               "2. Rechercher clients\n"
+               "3. Filtrer clients\n"
+               "4. Montrer tout les clients\n"
+               "5. Montrer les clients avec des champs manquants\n"
+               "6. Retourner en arriere\n\n");
 
 
         scanf("%d", &choix);
         switch (choix) {
             case 1:
                 printf("    ===trier par===\n"
-                       "    1. nom\n"
-                       "    2. pr\202nom\n"
-                       "    3. code postal\n"
-                       "    4. profession\n");
+                       "    1. Nom\n"
+                       "    2. Pr\202nom\n"
+                       "    3. Code postal\n"
+                       "    4. Profession\n");
                 scanf("%d",&option);
                 if(option > 4|| option <1){
-                    printf("valeur incorrecte");
+                    printf("Valeur incorrecte");
                     break;
                 }
+                clock_t start = clock();
+
                 trie(client,option,0,*ligne-1);
+                clock_t stop = clock();
+                double elapsed = (double)(stop - start) * 1000.0 / CLOCKS_PER_SEC;
                 showAll(client,ligne);
+                printf("Time elapsed in ms: %f", elapsed);
+
+
+
                 break;
 
 
             case 2:
                 printf("    ===rechercher par===\n"
-                       "    1. nom\n"
-                       "    2. pr\202nom\n"
-                       "    3. t\202l\202phone\n"
-                       "    4. email\n");
+                       "    1. Nom\n"
+                       "    2. Pr\202nom\n"
+                       "    3. T\202l\202phone\n"
+                       "    4. Email\n");
                 scanf("%d",&option);
                 if(option > 4|| option <1){
-                    printf("valeur incorrecte");
+                    printf("Valeur incorrecte");
                     break;
                 }
                 search(client,option,ligne);
@@ -114,14 +123,14 @@ void showClient(CLIENT *client[], int *ligne) {
 
 
             case 3:
-                printf("    ===filtrer par===\n"
-                       "    1. nom\n"
-                       "    2. pr\202nom\n"
-                       "    3. code postal\n"
-                       "    4. profession\n");
+                printf("    ===Filtrer par===\n"
+                       "    1. Nom\n"
+                       "    2. Pr\202nom\n"
+                       "    3. Code postal\n"
+                       "    4. Profession\n");
                 scanf("%d",&option);
                 if(option > 4 || option <1){
-                    printf("valeur incorrecte");
+                    printf("Valeur incorrecte");
                     break;
                 }
                 trie(client,option,0,*ligne-1);

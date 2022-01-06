@@ -6,7 +6,6 @@ void saveFile(CLIENT *client[], int *ligne){
 
     FILE *fp = fopen("save.txt","w");
     int i;
-
     for (i = 0; i < *ligne; i++) {
 
         fprintf(fp,"%d  %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n\n",i, client[i]->prenom, client[i]->nom,

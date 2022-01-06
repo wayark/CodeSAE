@@ -9,7 +9,7 @@ void blankClient(CLIENT *client[], int taille){
                 client[i]->telephone[0]=='\0'|| client[i]->email[0]=='\0'|| client[i]->metier[0]=='\0'){
 
 
-            printf(" %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n", client[i]->prenom, client[i]->nom,
+            printf("%d %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n",i, client[i]->prenom, client[i]->nom,
                    client[i]->ville,client[i]->codePostal, client[i]->telephone, client[i]->email, client[i]->metier);
             compt++;
 

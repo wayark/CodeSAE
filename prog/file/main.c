@@ -8,9 +8,13 @@
 
 int main() {
     char sortie[200];
+    char chemin[100];
     int ligne = 0;
 
-    FILE *fp = fopen(file, "r");
+    printf("Tapez le chemin de l'annuaire csv: ");
+    scanf("%s",chemin);
+
+    FILE *fp = fopen(chemin, "r");
     while (fgets(sortie, sizeof(sortie), fp)!=NULL) {
         ligne++;
     }
@@ -20,7 +24,7 @@ int main() {
     CLIENT *client[ligne];
 
 
-    loadClient(client);
+    loadClient(client, chemin);
 
     int choix;
     do {
