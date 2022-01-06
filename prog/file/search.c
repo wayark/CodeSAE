@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int search(CLIENT *client[], int choix, int *ligne){
+int search(CLIENT *client[], int choix, int *ligne){//Liam Lucas---fonction de recherche par dichotomique
     char search[50];
     printf("Tapez un mot a rechercher: ");//demande de string a rechercher
     scanf("%s",search);
@@ -17,7 +17,7 @@ int search(CLIENT *client[], int choix, int *ligne){
                 int middle = (start + end)/2;
 
                 if(strcmp(client[middle]->nom ,search) == 0){ //si le nom de la struct est égal au mot recherché on affiche le client
-                    //printf("salut");
+
                     printf("\n  %-25s | %-25s | %-15s | %-6s | %-16s | %-38s | %-20s \n", client[middle]->prenom, client[middle]->nom,
                            client[middle]->ville,client[middle]->codePostal, client[middle]->telephone, client[middle]->email, client[middle]->metier);
                     return middle;
@@ -90,6 +90,7 @@ int search(CLIENT *client[], int choix, int *ligne){
 
             }
             break;
+
         default:
             return -1;
     }

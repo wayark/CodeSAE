@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void addClient(CLIENT *client[], int *ligne){
+void addClient(CLIENT *client[], int *ligne){//Mateo Guenot
 
     client[*ligne] = (CLIENT *) malloc(sizeof(CLIENT)); //aloue une nouvelle case dans la mémoire au rang 5001(*ligne)
                                                             // car le tableau va de 0 a 5000

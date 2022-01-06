@@ -6,23 +6,23 @@
 #include "save.h"
 
 
-int main() {
+int main() {//Liam Lucas-Matéo Guenot
     char sortie[200];
     char chemin[100];
     int ligne = 0;
 
-    printf("Tapez le chemin de l'annuaire csv: ");
+    printf("Tapez le chemin de l'annuaire csv: ");//
     scanf("%s",chemin);
 
-    FILE *fp = fopen(chemin, "r");
-    while (fgets(sortie, sizeof(sortie), fp)!=NULL) {
+
+    FILE *fp = fopen(chemin, "r");//ouverture du fichier
+    while (fgets(sortie, sizeof(sortie), fp)!=NULL) {//calcul du nombre de ligne du fichier
         ligne++;
     }
     fclose(fp);
 
 
-    CLIENT *client[ligne];
-
+    CLIENT *client[ligne];//déclaration d'un tableau de pointeur de structure du nombre de ligne calculé
 
     loadClient(client, chemin);
 

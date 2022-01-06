@@ -8,25 +8,31 @@
 #include "blank.h"
 
 
-void loadClient(CLIENT *client[], char chemin[]) {
+void loadClient(CLIENT *client[], char chemin[]) {//Liam Lucas--- fonction de chargement et du découpage du fichier
 
     int i, mot, champ;
     int j = 0;
     char sortie[250];
 
-    FILE *fp = fopen(chemin, "r");
+    FILE *fp = fopen(chemin, "r");//ouverture du dossier avec le chemin donnée par l'utilisateur
     fseek(fp,0,SEEK_SET);
 
-    while (fgets(sortie, sizeof(sortie), fp)) {
-        client[j] = (CLIENT *) malloc(sizeof(CLIENT));
+    if (!fp){
+        printf("fichier csv invalide");// si le dossier est invalide retourne une erreur
+        exit(EXIT_FAILURE);
+    }
+                                                //tant que l'on peut lire une ligne dans notre dossier
+    while (fgets(sortie, sizeof(sortie), fp)) { //+ la ligne lu est mis dans la variable sortie
+
+        client[j] = (CLIENT *) malloc(sizeof(CLIENT));//pour chaque ligne on alloue une nouvelle case dans la structure
         champ = 0;
         mot = 0;
-        for (i = 0; sortie[i] != '\0'; i++) {
+        for (i = 0; sortie[i] != '\0'; i++) {// tant que l'on est pas au bout de la ligne
 
 
-            while (sortie[i] == ',') {
+            while (sortie[i] == ',') {//si on trouve une virgule
                 if (champ == 0) {
-                    client[j]->prenom[mot] = '\0';
+                    client[j]->prenom[mot] = '\0';//on met un \0 a la fin de la chaine actuel
                 } else if (champ == 1) {
                     client[j]->nom[mot] = '\0';
                 } else if (champ == 2) {
@@ -38,13 +44,13 @@ void loadClient(CLIENT *client[], char chemin[]) {
                 } else if (champ == 5) {
                     client[j]->email[mot] = '\0';
                 }
-                champ++;
-                mot = 0;
-                i++;
+                champ++;//passage au champs suivant de la structure
+                mot = 0;//remise a 0 du compteur qui parcoure chaque champ
+                i++;//passage a la lettre suivante de "sortie" pour ne pas prendre la virgule
 
             }
             if (champ == 0) {
-                client[j]->prenom[mot] = sortie[i];
+                client[j]->prenom[mot] = sortie[i];//introduction du caractère sortie[i] dans le champs corrspondant
             } else if (champ == 1) {
                 client[j]->nom[mot] = sortie[i];
             } else if (champ == 2) {
@@ -68,7 +74,7 @@ void loadClient(CLIENT *client[], char chemin[]) {
 }
 
 
-void showClient(CLIENT *client[], int *ligne) {
+void showClient(CLIENT *client[], int *ligne) {//Liam Lucas---- fonction de menu pour toute les fonctions d'affichage
     int choix,option;
 
     do {
@@ -94,7 +100,7 @@ void showClient(CLIENT *client[], int *ligne) {
                     printf("Valeur incorrecte");
                     break;
                 }
-                clock_t start = clock();
+                clock_t start = clock();//calcule du temps d'execution
 
                 trie(client,option,0,*ligne-1);
                 clock_t stop = clock();
@@ -133,7 +139,6 @@ void showClient(CLIENT *client[], int *ligne) {
                     printf("Valeur incorrecte");
                     break;
                 }
-                trie(client,option,0,*ligne-1);
                 filter(client,option,*ligne-1);
                 break;
 
@@ -160,11 +165,11 @@ void showClient(CLIENT *client[], int *ligne) {
 
 }
 
-void showAll(CLIENT *client[], int *ligne) {
+void showAll(CLIENT *client[], int *ligne) {//Liam Lucas---fonction d'affichage de ligne
     int i;
     printf(" %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n","prenom","nom","ville","code postal","telephone","email","metier");
     printf("%-100s","============================================================================================================================================================\n");
-    for (i = 0; i < *ligne; i++) {
+    for (i = 0; i < *ligne; i++) {// i allant de 0 au nombre de ligne du fichier donnée
 
         printf("%d  %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n\n",i, client[i]->prenom, client[i]->nom,
                client[i]->ville,

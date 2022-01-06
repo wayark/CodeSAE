@@ -1,9 +1,8 @@
 #include "trier.h"
 #include <string.h>
-#include <stdio.h>
 
 
-void trie(CLIENT *client[], int choix, int gauche, int droite) {
+void trie(CLIENT *client[], int choix, int gauche, int droite) {//Liam Lucas---fonction de trie quicksort
     int i, j;
     char *pivot;
     i = gauche;
@@ -82,37 +81,37 @@ void trie(CLIENT *client[], int choix, int gauche, int droite) {
             break;
 
         case 5:
-            pivot = client[(gauche + droite) / 2]->telephone; //pivot choisis au milieu de la liste des clients
+            pivot = client[(gauche + droite) / 2]->telephone;
             do {
-                while ((strcmp(client[i]->telephone, pivot) <0) && (i < droite)) {    //si le mot est a gauche et plus petit que le pivot
-                    i++;                                                        // i incrémente
+                while ((strcmp(client[i]->telephone, pivot) <0) && (i < droite)) {
+                    i++;
                 }
-                while ((strcmp(client[j]->telephone ,pivot)>0) && (j > gauche)) {  // si le mot est a droite et plus grand que le pivot
-                    j--;                                                     // j décrémente
+                while ((strcmp(client[j]->telephone ,pivot)>0) && (j > gauche)) {
+                    j--;
                 }
-                if (i <= j) {       //on échange les mot d'indice i et j car étant dans le mauvais coté du tableau
+                if (i <= j) {
                     swap(client, i, j);
                     i++;
                     j--;
                 }
-            } while (i <= j);// tant que les deux indice ne se rencontre pas
+            } while (i <= j);
             break;
 
         case 6:
-            pivot = client[(gauche + droite) / 2]->email; //pivot choisis au milieu de la liste des clients
+            pivot = client[(gauche + droite) / 2]->email;
             do {
-                while ((strcmp(client[i]->email, pivot) <0) && (i < droite)) {    //si le mot est a gauche et plus petit que le pivot
-                    i++;                                                        // i incrémente
+                while ((strcmp(client[i]->email, pivot) <0) && (i < droite)) {
+                    i++;
                 }
-                while ((strcmp(client[j]->email ,pivot)>0) && (j > gauche)) {  // si le mot est a droite et plus grand que le pivot
-                    j--;                                                     // j décrémente
+                while ((strcmp(client[j]->email ,pivot)>0) && (j > gauche)) {
+                    j--;
                 }
-                if (i <= j) {       //on échange les mot d'indice i et j car étant dans le mauvais coté du tableau
+                if (i <= j) {
                     swap(client, i, j);
                     i++;
                     j--;
                 }
-            } while (i <= j);// tant que les deux indice ne se rencontre pas
+            } while (i <= j);
             break;
         default:
             return;
@@ -125,7 +124,7 @@ void trie(CLIENT *client[], int choix, int gauche, int droite) {
         trie(client, choix, gauche, j);
     }
 
-    if (i < droite) {               // pareil
+    if (i < droite) {               // même principe
         trie(client, choix, i, droite);
     }
 }

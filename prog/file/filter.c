@@ -1,8 +1,11 @@
 #include "filter.h"
+#include "trier.h"
 #include <stdio.h>
 #include <string.h>
 
-void filter(CLIENT *client[], int choix, int ligne){ //même fonction que le search.c sauf strcmp a été remplacer par strncmp
+void filter(CLIENT *client[], int choix, int ligne){//Liam Lucas---fonction de filter
+                                                    //même fonction que le search.c sauf que strcmp a été remplacer par strncmp
+    trie(client,choix,0,ligne);
     char search[30];
     printf("tapez un filtre: ");
     scanf("%s",search);

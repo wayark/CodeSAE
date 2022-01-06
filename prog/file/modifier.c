@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void modifierClient(CLIENT *client[],int *ligne)
+void modifierClient(CLIENT *client[],int *ligne)//Mateo Guenot
 {
     int ligne_client;
     int choix = 0;
@@ -35,7 +35,7 @@ void modifierClient(CLIENT *client[],int *ligne)
     }
 }
 
-void ModifierLaLigne(CLIENT *client[], int no_ligne)
+void ModifierLaLigne(CLIENT *client[], int no_ligne)//Mateo Guenot
 {
     int choix;
     char new_prenom[20], new_nom[30], new_ville[20], new_codePostal[10], new_telephone[15], new_email[50], new_metier[30];

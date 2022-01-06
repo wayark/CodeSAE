@@ -3,7 +3,7 @@
 #include "search.h"
 #include <stdio.h>
 
-void supprimer(CLIENT *client[], int *ligne)
+void supprimer(CLIENT *client[], int *ligne)//Mateo Guenot
 {
     int i, ligne_client, choix;
     printf("Pour supprimer les donn\202es d'un client veuillez rentrer le chiffre d'un des champs que vous possedez :\n"
