@@ -125,6 +125,7 @@ void showClient(CLIENT *client[], int *ligne) {//Liam Lucas---- fonction de menu
                     break;
                 }
                 search(client,option,ligne);
+
                 break;
 
 
@@ -139,17 +140,26 @@ void showClient(CLIENT *client[], int *ligne) {//Liam Lucas---- fonction de menu
                     printf("Valeur incorrecte");
                     break;
                 }
+
                 filter(client,option,*ligne-1);
                 break;
 
 
 
             case 4:
+                start = clock();
                 showAll(client, ligne);
+                stop = clock();
+                elapsed = (double)(stop - start) * 1000.0 / CLOCKS_PER_SEC;
+                printf("Time elapsed in ms: %f", elapsed);
                 break;
 
             case 5:
+                start = clock();
                 blankClient(client,*ligne);
+                stop = clock();
+                elapsed = (double)(stop - start) * 1000.0 / CLOCKS_PER_SEC;
+                printf("Time elapsed in ms: %f", elapsed);
                 break;
 
 

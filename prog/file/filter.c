@@ -1,5 +1,6 @@
 #include "filter.h"
 #include "trier.h"
+#include <time.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -9,6 +10,7 @@ void filter(CLIENT *client[], int choix, int ligne){//Liam Lucas---fonction de f
     char search[30];
     printf("tapez un filtre: ");
     scanf("%s",search);
+    clock_t begin = clock();
     int start = 0;
     int end = ligne-1;
     switch (choix) {//filtre en fonction du champ choisis
@@ -17,8 +19,12 @@ void filter(CLIENT *client[], int choix, int ligne){//Liam Lucas---fonction de f
                 int middle = (start + end)/2;
 
                 if(strncmp(client[middle]->nom ,search, strlen(search)) == 0){// si le début du mot est égal au champ recherché
-                    showFilter(client,choix,middle,search);// fonction qui montre tout les mot concerné
 
+                    clock_t stop = clock();
+                    double elapsed = (double)(stop - begin) * 1000.0 / CLOCKS_PER_SEC;
+
+                    showFilter(client,choix,middle,search);// fonction qui montre tout les mot concerné
+                    printf("Time elapsed in ms: %f", elapsed);
                     return;
                 }
                 else if(strncmp(client[middle]->nom ,search, strlen(search))< 0){
@@ -35,8 +41,12 @@ void filter(CLIENT *client[], int choix, int ligne){//Liam Lucas---fonction de f
                 int middle = (start + end)/2;
 
                 if(strncmp(client[middle]->prenom ,search, strlen(search)) == 0){
-                    showFilter(client,choix,middle,search);
 
+                    clock_t stop = clock();
+                    double elapsed = (double)(stop - begin) * 1000.0 / CLOCKS_PER_SEC;
+
+                    showFilter(client,choix,middle,search);
+                    printf("Time elapsed in ms: %f", elapsed);
                     return;
                 }
                 else if(strncmp(client[middle]->prenom ,search, strlen(search))< 0){
@@ -53,7 +63,13 @@ void filter(CLIENT *client[], int choix, int ligne){//Liam Lucas---fonction de f
                 int middle = (start + end)/2;
 
                 if(strncmp(client[middle]->codePostal ,search, strlen(search)) == 0){
+
+                    clock_t stop = clock();
+                    double elapsed = (double)(stop - begin) * 1000.0 / CLOCKS_PER_SEC;
+
                     showFilter(client,choix,middle,search);
+
+                    printf("Time elapsed in ms: %f", elapsed);
 
                     return;
                 }
@@ -71,8 +87,12 @@ void filter(CLIENT *client[], int choix, int ligne){//Liam Lucas---fonction de f
                 int middle = (start + end)/2;
 
                 if(strncmp(client[middle]->metier ,search, strlen(search)) == 0){
-                    showFilter(client,choix,middle,search);
 
+                    clock_t stop = clock();
+                    double elapsed = (double)(stop - begin) * 1000.0 / CLOCKS_PER_SEC;
+
+                    showFilter(client,choix,middle,search);
+                    printf("Time elapsed in ms: %f", elapsed);
                     return;
                 }
                 else if(strncmp(client[middle]->metier ,search, strlen(search))< 0){
