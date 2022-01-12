@@ -6,11 +6,11 @@ void blankClient(CLIENT *client[], int taille){//Benjamin Bonnepart---fonction d
     int compt = 0;
     while (i < taille-1){   //tant que ce n'est pas la fin du tableau
         if(client[i]->prenom[0]=='\0'|| client[i]->nom[0]=='\0' || client[i]->ville[0]=='\0'|| client[i]->codePostal[0]=='\0'||
-                client[i]->telephone[0]=='\0'|| client[i]->email[0]=='\0'|| client[i]->metier[0]=='\0'){ // si un de ces champs ou plusieur est vide
+                client[i]->telephone[0]=='\0'|| client[i]->email[0]=='\0'|| client[i]->metier[0]=='\0'){ // si un de ces champs ou plusieurs est vide
 
 
             printf("%d %-25s | %-25s | %-15s | %-11s | %-16s | %-38s | %-20s \n",i, client[i]->prenom, client[i]->nom,
-                   client[i]->ville,client[i]->codePostal, client[i]->telephone, client[i]->email, client[i]->metier); // alors affiche la ligne du client
+                   client[i]->ville,client[i]->codePostal, client[i]->telephone, client[i]->email, client[i]->metier); // alors affiche la ligne du client ayant champs vide
             compt++;
 
         }

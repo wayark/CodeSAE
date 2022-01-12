@@ -54,7 +54,7 @@ int main() {//Liam Lucas - Matéo Guenot
                 modifierClient(client,&ligne);
                 break;
             case 5:
-                saveFile(client, &ligne);
+                saveFile(client, &ligne, chemin);
                 break;
             case 6:
                 break;
