@@ -109,8 +109,10 @@ void filter(CLIENT *client[], int choix, int ligne){//Liam Lucas---fonction de f
     }
 
 
-
-    printf("aucun r\202sultat");
+    clock_t stop = clock();
+    double elapsed = (double)(stop - begin) * 1000.0 / CLOCKS_PER_SEC;
+    printf("aucun r\202sultat\n");
+    printf("Time elapsed in ms: %f", elapsed);
 }
 
 void showFilter(CLIENT *client[], int choix,int middle, char *search){

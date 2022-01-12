@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "client.h"
 #include "add.h"
 #include "modifier.h"
@@ -6,7 +7,7 @@
 #include "save.h"
 
 
-int main() {//Liam Lucas-Matéo Guenot
+int main() {//Liam Lucas - Matéo Guenot
     char sortie[200];
     char chemin[100];
     int ligne = 0;

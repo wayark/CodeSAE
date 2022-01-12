@@ -110,7 +110,7 @@ int search(CLIENT *client[], int choix, int *ligne){//Liam Lucas---fonction de r
             return -1;
     }
 
-    printf("mot non trouve");
+    printf("mot non trouve\n");
     clock_t stop = clock();
     double elapsed = (double)(stop - begin) * 1000.0 / CLOCKS_PER_SEC;
     printf("Time elapsed in ms: %f", elapsed);

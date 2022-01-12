@@ -95,7 +95,7 @@ void ModifierLaLigne(CLIENT *client[], int no_ligne)//Mateo Guenot
                 {
                     printf("Entrer le nouveau t\202l\202phone (10 chiffres) a \202crire 00.00.00.00.00 :");
                     scanf("%s",new_telephone);
-                } while (strlen(new_telephone)>14);
+                } while (strlen(new_telephone)!=14 || (new_telephone[2]!='.') || (new_telephone[5]!='.') || (new_telephone[8]!='.') || (new_telephone[11]!='.'));
                 strcpy(client[no_ligne]->telephone,new_telephone);
                 break;
             case 6:

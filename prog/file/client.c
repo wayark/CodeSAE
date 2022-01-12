@@ -106,7 +106,7 @@ void showClient(CLIENT *client[], int *ligne) {//Liam Lucas---- fonction de menu
                 clock_t stop = clock();
                 double elapsed = (double)(stop - start) * 1000.0 / CLOCKS_PER_SEC;
                 showAll(client,ligne);
-                printf("Time elapsed in ms: %f", elapsed);
+                printf("Time elapsed for sorting in ms: %f", elapsed);
 
 
 
